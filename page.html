@@ -1,0 +1,1949 @@
+
+
+
+<html>
+<head>
+<title>:: ULHASNAGAR MUNICIPAL CORPORATION ::</title>
+<SCRIPT language=JavaScript src="JavaScript/general.js" 
+type=text/javascript></SCRIPT>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/global.css" type="text/css">
+ <script language="javascript">
+        
+		 function wardsubmit()
+		 {
+           var flag=0;
+
+		   if(document.FrmPropertySearch.txtFName.value == '')
+			 {
+			  flag = flag +1;
+             }
+		   if(document.FrmPropertySearch.txtSName.value == '')
+			 {
+			  flag = flag +1;
+             }
+		   if(document.FrmPropertySearch.txtLName.value == '')
+			 {
+			  flag = flag +1;
+			 }
+		   if(document.FrmPropertySearch.oldpropno.value == '')
+			 {
+			  flag = flag +1;
+			 }
+		   if(document.FrmPropertySearch.propward.value == 'All')
+			 {
+			  flag = flag +1;
+			 }
+
+		   if(flag==5)
+			 {
+              alert("Please select any one search criteria");
+			  document.FrmPropertySearch.txtFName.focus();
+              return false;
+             }	
+			 
+
+           if(flag<5)
+			{
+               document.FrmPropertySearch.submit();
+			}  
+
+
+			
+         }								  
+        function clearForm()
+        {
+        document.FrmPropertySearch.reset();
+        return false;
+        }
+
+
+
+ </script>
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0">
+ <form name="FrmPropertySearch" action='propertyduessearch.jsp'  method=POST>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="71%"> 
+		 
+
+<html>
+<head>
+<script language="javascript">
+function checkLogin(){
+	if(document.index.userid.value==""){
+		alert("Please Enter User Id");
+		document.index.userid.focus();
+		return false;
+	}else if(document.index.password.value==""){
+		alert("Please Enter Password");
+		document.index.password.focus();
+		return false;
+	}else{
+		document.index.action="http://203.200.229.52:8090/umc/jsp/logincheck.jsp";
+		document.index.submit();
+	}
+}
+
+
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+  function Start(page)
+  {
+  	OpenWin=this.open(page,"CtrlWindow","toolbar=no,menubar=no,width=600,height=400,location=no,scrollbars=yes,resize=no");
+  }
+</SCRIPT>
+<style>
+
+select.flat,textarea.flat,input.flat 
+{ 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px;
+	border-color : #888888;
+	border-style: solid;
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px;
+}
+</style>
+<title>:: ULHASNAGAR MUNICIPAL CORPORATION ::</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/global.css" type="text/css">
+<link rel="stylesheet" href="../css/global.css" type="text/css">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="100%" background="../images/umc_top_bg.jpg"><img src="../images/umc_top.jpg" ></td>
+  </tr>
+  <tr> 
+    <td width="100%" background="../images/umc_text_bg.jpg"><img src="../images/umc_text.jpg"></td>
+  </tr>
+  <!-- <tr> 
+    <td width="100%" background="../images/umc_text_menu.jpg"> 
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tr class="form_hd2" >
+			<td width="10%" height="20">&nbsp;&nbsp;<a href="http://www.umc.gov.in"><font color="#FFFFFF">HOME</font></a></td>
+			<td height="20"><img src="../images/menu_separator.gif" border=0 align=absMiddle></td>
+			<td width="15%" height="20"><a href="about_us.jsp">ABOUT US</a> </td>
+			<td height="20"><img src="../images/menu_separator.gif" border=0 align=absMiddle></td>
+			<td width="15%" height="20"><a href="develop_plan.jsp">CITY MAP</a></td>
+			<td height="20"><img src="../images/menu_separator.gif" border=0 align=absMiddle></td>
+			<td width="15%" height="20"><a href="http://203.200.229.52:8090/umc/jsp/citizen_charterForm.jsp" target="_blank">CITIZEN CHARTER</a></td>
+			<td height="20"><img src="../images/menu_separator.gif" border=0 align=absMiddle></td>
+			<td width="15%" height="20"><a href="opening_cfc.jsp" target="_blank">DOWNLOAD FORMS</a> </td>
+			<td height="20"><img src="../images/menu_separator.gif" border=0 align=absMiddle></td>
+			<td width="15%" height="20"><a href="press_release.jsp" target="_blank">PRESS RELEASE</a> </td>
+			<td height="20"><img src="../images/menu_separator.gif" border=0 align=absMiddle></td>
+			<td width="15%" height="20"><a href="contact_us.jsp">CONTACT US</a> </td>
+		  </tr>
+	  </table>
+	</td>
+  </tr>-->
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="15%" valign="top"> 
+<div align="center"></div> 
+
+ 
+    </td>
+  </tr>
+</table> 
+ <br>
+    <!--comment given by Vijay Gupta on 21.08.2010 <td width="18%" valign="top" bgcolor="E6E6E6"> 
+      <table cellspacing=0 cellpadding=0 width=99% border=0>
+        <tbody> 
+        <tr> 
+          <td bgcolor=#ffffff height=1 valign="top"><img height=1 alt="" 
+                        src="Menu RealGuide_files/007.gif" width=1 
+                    border=0></td>
+        </tr>
+        </tbody> 
+      </table>
+      
+      
+	      
+     
+     
+	new develop by sudhir chavhan ABM 27AUS2009 
+    
+	<td width="1%" background="../images/dotline.jpg"><img src="../images/dotline.jpg" width="7" height="53"></td> -->
+	<table width="100%">
+	<tr>
+    <td width="53%" valign="top">
+      <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td >
+           
+
+              <TABLE WIDTH="100%" BORDER="0" cellpadding="3" cellspacing="1">
+                <TR bgcolor="5279A4"> 
+                  <TD  WIDTH="100%" COLSPAN="3" class="head1" height="20"> 
+                    <div align="center">PROPERTY NUMBER SEARCH&nbsp/&nbsp;&#2350;&#2366;&#2354;&#2350;&#2340;&#2381;&#2340;&#2366;&#32;&#2325;&#2381;&#2352;&#2350;&#2366;&#2306;&#2325;&#32;&#2358;&#2379;&#2343;</div>
+                  </TD>
+				</TR>
+		      </table>
+			 </td>
+			</tr>
+		</table>
+	</td>
+	</tr>
+	<tr  align=center>
+	  <td>
+		<table WIDTH="70%" BORDER="1" cellpadding="3" cellspacing="1">
+        <TR > 
+		<br><br>
+	    
+
+
+<tr>
+<td align =center  border="0" >
+<font color=blue> <B > Click On Property Number to View the Detail &nbsp/&nbsp;&#2350;&#2366;&#2361;&#2368;&#2340;&#2368;&#2360;&#2366;&#2336;&#2368;&#32;&#2350;&#2366;&#2354;&#2350;&#2340;&#2381;&#2340;&#2366;&#32;&#2325;&#2381;&#2352;&#2350;&#2366;&#2306;&#2325;&#2357;&#2352;&#32;&#2325;&#2381;&#2354;&#2368;&#2325;&#32;&#2325;&#2352;&#2366;&#46;</B></font>
+</td>
+</tr>
+
+<tr align =center  border="0" >
+<td>
+
+
+        <table border="0" cellspacing="1" cellpadding="1" width=100% align=center>
+              <TR>
+                 <TD>
+                     <div id="cash" STYLE="overflow:scroll; border:1px #ffffcc solid; height:610px;" leftmargin='0' rightmargin='0'>
+
+                           <table cellspacing=1 cellpadding=2 border='1' bordercolor='white' width=100% align=center>
+                                <TR class=contentarialheading bgcolor="5279A4" align=center>                                              
+                                  <TD width=20%><font size=2 color=white ><b> Property No.</b></font></TD>
+                                  <TD width=10%><font size=2 color=white ><b>Flat No.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></font></TD>
+                                  <TD width=30%><font size=2 color=white ><b>Owner Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></font></TD>
+                                  <TD width=40%><font size=2 color=white>
+								  <b>Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></font></TD>
+                                </tr>
+
+                                               
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014194900"><font size=2 color="5279A4" >014194900</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014194900"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014194900"><font size=2 color="5279A4" >SONA ARAVIND CHOHAN</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014194900"><font size=2 color="5279A4" >MAIN BAZAR SHIV ROAD BHD.SHOP LNE OPP.H.M.GATE  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014195000"><font size=2 color="5279A4" >014195000</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014195000"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014195000"><font size=2 color="5279A4" >KRISHNA GIROYYA POOJARI</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014195000"><font size=2 color="5279A4" >MAIN BAZAR SHIV ROAD BHD.SHOP LNE OPP.H.M.GATE  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014195100"><font size=2 color="5279A4" >014195100</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014195100"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014195100"><font size=2 color="5279A4" >VISHAL BALASAHEB FULWAR</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014195100"><font size=2 color="5279A4" >CHARCH OPP.H.M.CO.  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014227300"><font size=2 color="5279A4" >014227300</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014227300"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014227300"><font size=2 color="5279A4" >GIRJA DEVI BACHO PRASAD GUPTA</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014227300"><font size=2 color="5279A4" >BELOW M.I.D.C DHOBI GHAT KAMLA NEHRU NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014227400"><font size=2 color="5279A4" >014227400</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014227400"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014227400"><font size=2 color="5279A4" >LALTAPRASAD S. TIWARI</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014227400"><font size=2 color="5279A4" >BELOW M.I.D.C DHOBI GHAT KAMLA NEHRU NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014217800"><font size=2 color="5279A4" >014217800</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014217800"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014217800"><font size=2 color="5279A4" >SANTOSHKUMAR J MISHRA/ ASHUTOSH J MISHRA</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014217800"><font size=2 color="5279A4" >NR.M.I.D.C ROAD TANAJI NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014217900"><font size=2 color="5279A4" >014217900</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014217900"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014217900"><font size=2 color="5279A4" >SANTOSHKUMAR/ASHUTOSH JADAMAPRASAD MISHRA</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014217900"><font size=2 color="5279A4" >NR.M.I.D.C ROAD TANAJI NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014218000"><font size=2 color="5279A4" >014218000</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014218000"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218000"><font size=2 color="5279A4" >BRIJ-BHUSHAN SHITLAPRASAD TIWARI</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218000"><font size=2 color="5279A4" >NR.M.I.D.C ROAD TANAJI NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014218100"><font size=2 color="5279A4" >014218100</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014218100"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218100"><font size=2 color="5279A4" >SARDAR SURJEETSINGH S/O UDAMSINGH</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218100"><font size=2 color="5279A4" >M.I.D.C ROAD TANAJI NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014218200"><font size=2 color="5279A4" >014218200</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014218200"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218200"><font size=2 color="5279A4" >SHANTI GIRISHCHAND YADAV</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218200"><font size=2 color="5279A4" >BELOW M.I.D.C TANK DHOBI GHAT MAIN ROAD  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014218300"><font size=2 color="5279A4" >014218300</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014218300"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218300"><font size=2 color="5279A4" >DEVAN K.GHIUTE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218300"><font size=2 color="5279A4" >BELOW M.I.D.C TANK DHOBI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014218400"><font size=2 color="5279A4" >014218400</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014218400"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218400"><font size=2 color="5279A4" >SARANGA BHAU THOMBRE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218400"><font size=2 color="5279A4" >BELOW M.I.D.C TANK DHOBI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014218500"><font size=2 color="5279A4" >014218500</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014218500"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218500"><font size=2 color="5279A4" >KANTAPRASAD UCHALAL SINGH</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218500"><font size=2 color="5279A4" >BELOW M.I.D.C TANK DHOBI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014218600"><font size=2 color="5279A4" >014218600</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014218600"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218600"><font size=2 color="5279A4" >CHANDRASHEKAR SINGH/BANSILAL S</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218600"><font size=2 color="5279A4" >BELOW M.I.D.C TANK DHOBI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014218700"><font size=2 color="5279A4" >014218700</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014218700"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218700"><font size=2 color="5279A4" >SITADEVI INDRAJEET VISHWAKARMA</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014218700"><font size=2 color="5279A4" >BELOW M.I.D.C TANK DHOBI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014243400"><font size=2 color="5279A4" >014243400</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014243400"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014243400"><font size=2 color="5279A4" >KISAND.CHAUDHARI</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014243400"><font size=2 color="5279A4" >NR M.I.D.C. TANK DHOBHI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014243500"><font size=2 color="5279A4" >014243500</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014243500"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014243500"><font size=2 color="5279A4" >MACHHINDRA P.KAMBLE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014243500"><font size=2 color="5279A4" >NR M.I.D.C. TANK DHOBHI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014243600"><font size=2 color="5279A4" >014243600</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014243600"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014243600"><font size=2 color="5279A4" >NARYAN ISHWAR DALVI</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014243600"><font size=2 color="5279A4" >NR M.I.D.C. TANK DHOBHI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014243700"><font size=2 color="5279A4" >014243700</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014243700"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014243700"><font size=2 color="5279A4" >MARUTI N.WAGHMARE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014243700"><font size=2 color="5279A4" >NR M.I.D.C. TANK DHOBHI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014243800"><font size=2 color="5279A4" >014243800</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014243800"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014243800"><font size=2 color="5279A4" >SHRIRAM ROHIDAS KHADE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014243800"><font size=2 color="5279A4" >NR M.I.D.C. TANK DHOBHI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014230200"><font size=2 color="5279A4" >014230200</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014230200"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014230200"><font size=2 color="5279A4" >NARENDRAPAL BASGITPAL</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014230200"><font size=2 color="5279A4" >BELOW M.I.D.C DHOBI GHAT KAMLA NEHRU NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014230300"><font size=2 color="5279A4" >014230300</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014230300"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014230300"><font size=2 color="5279A4" >SUNITA PRADEEP SINGH</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014230300"><font size=2 color="5279A4" >BELOW M.I.D.C DHOBI GHAT KAMLA NEHRU NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014238600"><font size=2 color="5279A4" >014238600</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014238600"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014238600"><font size=2 color="5279A4" >TULSHI D.YADAV</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014238600"><font size=2 color="5279A4" >NR.M.I.D.C. NR.BK.204   ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014238700"><font size=2 color="5279A4" >014238700</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014238700"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014238700"><font size=2 color="5279A4" >GANGARAM R.YADAV</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014238700"><font size=2 color="5279A4" >NR.M.I.D.C. NR.BK.204   ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014238800"><font size=2 color="5279A4" >014238800</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014238800"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014238800"><font size=2 color="5279A4" >ACHALAL C.YADAV</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014238800"><font size=2 color="5279A4" >NR.M.I.D.C. NR.BK.204   ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014238900"><font size=2 color="5279A4" >014238900</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014238900"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014238900"><font size=2 color="5279A4" >RAJKARAN B.YADAV</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014238900"><font size=2 color="5279A4" >NR.M.I.D.C. NR.BK.204  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014239000"><font size=2 color="5279A4" >014239000</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014239000"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239000"><font size=2 color="5279A4" >KESANI P.YADAV</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239000"><font size=2 color="5279A4" >NR.M.I.D.C. NR.BK.204  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014239100"><font size=2 color="5279A4" >014239100</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014239100"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239100"><font size=2 color="5279A4" >SUNNY N.YADAV</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239100"><font size=2 color="5279A4" >NR.M.I.D.C. NR.BK.204  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014239200"><font size=2 color="5279A4" >014239200</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014239200"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239200"><font size=2 color="5279A4" >SUNILKUMAR LAXMINARAYAN MISHRA</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239200"><font size=2 color="5279A4" >NR.M.I.D.C. NR.BK.204  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014239300"><font size=2 color="5279A4" >014239300</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014239300"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239300"><font size=2 color="5279A4" >SIHARAM M. KHWADE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239300"><font size=2 color="5279A4" >NR.M.I.D.C. TANK   ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014239400"><font size=2 color="5279A4" >014239400</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014239400"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239400"><font size=2 color="5279A4" >MIRCHOMAL H.PESWANI</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239400"><font size=2 color="5279A4" >NR.M.I.D.C. TANK   ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014239500"><font size=2 color="5279A4" >014239500</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014239500"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239500"><font size=2 color="5279A4" >ASHOK KASHINATH BHALERAO</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239500"><font size=2 color="5279A4" >NR.M.I.D.C. TANK   ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014239600"><font size=2 color="5279A4" >014239600</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014239600"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239600"><font size=2 color="5279A4" >BHOJO B.MADAN</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239600"><font size=2 color="5279A4" >NR.M.I.D.C. TANK   ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014239700"><font size=2 color="5279A4" >014239700</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014239700"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239700"><font size=2 color="5279A4" >SINDHUBAI S. MADANE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239700"><font size=2 color="5279A4" >NR.M.I.D.C. TANK   ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014239800"><font size=2 color="5279A4" >014239800</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014239800"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239800"><font size=2 color="5279A4" >ASSARAM N.MADANE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014239800"><font size=2 color="5279A4" >NR.M.I.D.C. TANK   ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014267600"><font size=2 color="5279A4" >014267600</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014267600"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014267600"><font size=2 color="5279A4" >GOPICHAND KHEMCHAND KUKREJA</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014267600"><font size=2 color="5279A4" >AMBIKA APTS., BIRLA GATE GRD.FLOOR SHOP.14  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014281700"><font size=2 color="5279A4" >014281700</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014281700"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014281700"><font size=2 color="5279A4" >DAGDU RAJARAM GUTHALE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014281700"><font size=2 color="5279A4" >INDIRA NAGAR NR. M.I.D.C. TANK  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014281800"><font size=2 color="5279A4" >014281800</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014281800"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014281800"><font size=2 color="5279A4" >NAGSU N. THAKRE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014281800"><font size=2 color="5279A4" >INDIRA NAGAR NR. M.I.D.C. TANK  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014281900"><font size=2 color="5279A4" >014281900</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014281900"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014281900"><font size=2 color="5279A4" >BABANBAI JAGANNATH KALE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014281900"><font size=2 color="5279A4" >INDIRA NAGAR NR. M.I.D.C. TANK  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014282000"><font size=2 color="5279A4" >014282000</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014282000"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014282000"><font size=2 color="5279A4" >ASHOK D. CHOUDHARI</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014282000"><font size=2 color="5279A4" >INDIRA NAGAR NR. M.I.D.C. TANK  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014282100"><font size=2 color="5279A4" >014282100</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014282100"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014282100"><font size=2 color="5279A4" >LAXMIBAI U. AHIRE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014282100"><font size=2 color="5279A4" >INDIRA NAGAR NR. M.I.D.C. TANK  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014282200"><font size=2 color="5279A4" >014282200</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014282200"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014282200"><font size=2 color="5279A4" >PARBATIBAI C. AHIRE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014282200"><font size=2 color="5279A4" >INDIRA NAGAR NR. M.I.D.C. TANK  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014282300"><font size=2 color="5279A4" >014282300</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014282300"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014282300"><font size=2 color="5279A4" >SHANTABAI D MISAL</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014282300"><font size=2 color="5279A4" >INDIRA NAGAR NR. M.I.D.C. TANK  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014271700"><font size=2 color="5279A4" >014271700</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014271700"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014271700"><font size=2 color="5279A4" >GAJANAN BALU LATE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014271700"><font size=2 color="5279A4" >AMBIKA APT.,BIRLA GATE FLAT - 310  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014271800"><font size=2 color="5279A4" >014271800</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014271800"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014271800"><font size=2 color="5279A4" >M.K. FATARAM</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014271800"><font size=2 color="5279A4" >AMBIKA APT.,BIRLA GATE FLAT - 311  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014271900"><font size=2 color="5279A4" >014271900</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014271900"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014271900"><font size=2 color="5279A4" >SHAMSHUDDIN ABDUL SHAKUR QURESHI</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014271900"><font size=2 color="5279A4" >AMBIKA APT.,BIRLA GATE FLAT - 312  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014272000"><font size=2 color="5279A4" >014272000</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014272000"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014272000"><font size=2 color="5279A4" >SMITA JAGANNATH KISMATRAO</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014272000"><font size=2 color="5279A4" >AMBIKA APT.,BIRLA GATE FLAT - 313  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014272100"><font size=2 color="5279A4" >014272100</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014272100"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014272100"><font size=2 color="5279A4" >HOLDER</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014272100"><font size=2 color="5279A4" >AMBIKA APT.,BIRLA GATE FLAT - 314  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014272200"><font size=2 color="5279A4" >014272200</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014272200"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014272200"><font size=2 color="5279A4" >SANGEETA LALLAN YADAV</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014272200"><font size=2 color="5279A4" >AMBIKA APT.,BIRLA GATE FLAT - 315  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014272300"><font size=2 color="5279A4" >014272300</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014272300"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014272300"><font size=2 color="5279A4" >HAMIDAN MOHAMMAD HUSAIN</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014272300"><font size=2 color="5279A4" >AMBIKA APT.,BIRLA GATE FLAT - 316  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014272400"><font size=2 color="5279A4" >014272400</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014272400"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014272400"><font size=2 color="5279A4" >MANGILLA CHOUDHARI</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014272400"><font size=2 color="5279A4" >AMBIKA APT.,BIRLA GATE FLAT -  401  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014297900"><font size=2 color="5279A4" >014297900</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014297900"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014297900"><font size=2 color="5279A4" >VIMLABAI SHIVRAM KADARE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014297900"><font size=2 color="5279A4" >INDIRA NAGAR NR. M.I.D.C. TANK  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014298000"><font size=2 color="5279A4" >014298000</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014298000"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014298000"><font size=2 color="5279A4" >SAHIBI KARIM MUNE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014298000"><font size=2 color="5279A4" >INDIRA NAGAR NR. M.I.D.C. TANK  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014298100"><font size=2 color="5279A4" >014298100</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014298100"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014298100"><font size=2 color="5279A4" >RAJU BABULAL BAGUL/REKHA RAJU BAGUL</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014298100"><font size=2 color="5279A4" >INDIRA NAGAR NR. M.I.D.C. TANK  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014320000"><font size=2 color="5279A4" >014320000</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014320000"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320000"><font size=2 color="5279A4" >RAJIYABANU BASHIR SHAIKH</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320000"><font size=2 color="5279A4" >BELOW M.I.D.C TANK DHOBI GHAT PORTION  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014320100"><font size=2 color="5279A4" >014320100</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014320100"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320100"><font size=2 color="5279A4" >SUMAN GULAB PAGARE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320100"><font size=2 color="5279A4" >ROOM AT BK.NO.87 (PORTION)   ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014320200"><font size=2 color="5279A4" >014320200</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014320200"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320200"><font size=2 color="5279A4" >SUVARNA SUNIL KORE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320200"><font size=2 color="5279A4" >NR.PIPE LINE M.I.D.C.ROAD BIRLA MANDIR, PORTION  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014320300"><font size=2 color="5279A4" >014320300</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014320300"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320300"><font size=2 color="5279A4" >VASANT SUNDER JARKED</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320300"><font size=2 color="5279A4" >BELOW M.I.D.C. TANK DHOBI GHAT (PORTION)  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014320400"><font size=2 color="5279A4" >014320400</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014320400"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320400"><font size=2 color="5279A4" >RAJESHREE SONAJI BANSODE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320400"><font size=2 color="5279A4" >SHRI DATTA APT. NR,SINDHI PRIMARY SCHOOL, SHOP NO-1.  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014320500"><font size=2 color="5279A4" >014320500</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014320500"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320500"><font size=2 color="5279A4" >SUNIL ROHRA</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320500"><font size=2 color="5279A4" >SHRI DATTA APT. NR,SINDHI PRIMARY SCHOOL, SHOP NO-2  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014320600"><font size=2 color="5279A4" >014320600</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014320600"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320600"><font size=2 color="5279A4" >NAMDEO BALAJI AGRE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320600"><font size=2 color="5279A4" >SHRI DATTA APT. NR,SINDHI PRIMARY SCHOOL, SHOP NO-3  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014320700"><font size=2 color="5279A4" >014320700</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014320700"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320700"><font size=2 color="5279A4" >DNYANESHWAR S/KAILAS S SUKRE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320700"><font size=2 color="5279A4" >SHRI DATTA APT. NR,SINDHI PRIMARY SCHOOL, SHOP NO-4  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014320800"><font size=2 color="5279A4" >014320800</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014320800"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320800"><font size=2 color="5279A4" >KALPANA SHANKAR SUKARE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320800"><font size=2 color="5279A4" >SHRI DATTA APT. NR,SINDHI PRIMARY SCHOOL, SHOP NO-5  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014320900"><font size=2 color="5279A4" >014320900</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014320900"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320900"><font size=2 color="5279A4" >SUBHASHCHAND SHANKARLAL CHAURASIYA</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014320900"><font size=2 color="5279A4" >SHRI DATTA APT. NR,SINDHI PRIMARY SCHOOL, FLAT NO-101.  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014272900"><font size=2 color="5279A4" >014272900</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014272900"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014272900"><font size=2 color="5279A4" >ISHWARLAL R. AGARWAL</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014272900"><font size=2 color="5279A4" >AMBIKA APT.,BIRLA GATE FLAT -  406  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014273000"><font size=2 color="5279A4" >014273000</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014273000"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014273000"><font size=2 color="5279A4" >VISHAKHY NARAYANAN</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014273000"><font size=2 color="5279A4" >AMBIKA APT.,BIRLA GATE FLAT -  407  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014289500"><font size=2 color="5279A4" >014289500</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014289500"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014289500"><font size=2 color="5279A4" >FATESINGH SHALIGRAM CHAVHAN</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014289500"><font size=2 color="5279A4" >INDIRA NAGAR NR. M.I.D.C. TANK  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014289600"><font size=2 color="5279A4" >014289600</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014289600"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014289600"><font size=2 color="5279A4" >GORAKH BHARAT SHINDE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014289600"><font size=2 color="5279A4" >INDIRA NAGAR NR. M.I.D.C. TANK  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014289700"><font size=2 color="5279A4" >014289700</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014289700"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014289700"><font size=2 color="5279A4" >SOBHA SAHEBRAO ZALTE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014289700"><font size=2 color="5279A4" >INDIRA NAGAR NR. M.I.D.C. TANK  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014187400"><font size=2 color="5279A4" >014187400</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014187400"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014187400"><font size=2 color="5279A4" >PRAKASH SHENU PANDHARE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014187400"><font size=2 color="5279A4" >OPP H.M.GATE,  SHAHAD  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014187500"><font size=2 color="5279A4" >014187500</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014187500"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014187500"><font size=2 color="5279A4" >MARUTI V SABLE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014187500"><font size=2 color="5279A4" >OPP H.M.GATE,  SHAHAD  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014187600"><font size=2 color="5279A4" >014187600</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014187600"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014187600"><font size=2 color="5279A4" >SHAMRAO G GHAGARE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014187600"><font size=2 color="5279A4" >OPP H.M.GATE,  SHAHAD  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014187700"><font size=2 color="5279A4" >014187700</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014187700"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014187700"><font size=2 color="5279A4" >RAJARAM GANU GHAGARE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014187700"><font size=2 color="5279A4" >OPP H.M.GATE,  SHAHAD  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014187800"><font size=2 color="5279A4" >014187800</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014187800"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014187800"><font size=2 color="5279A4" >BHARAT SHANKAR DESAI</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014187800"><font size=2 color="5279A4" >OPP H.M.GATE,  SHAHAD  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014187900"><font size=2 color="5279A4" >014187900</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014187900"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014187900"><font size=2 color="5279A4" >SHAMRAO D GHAGARE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014187900"><font size=2 color="5279A4" >OPP H.M.GATE,  SHAHAD  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014213700"><font size=2 color="5279A4" >014213700</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014213700"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014213700"><font size=2 color="5279A4" >PARVATI BABU KOLI</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014213700"><font size=2 color="5279A4" >M.I.D.C ROAD TANAJI NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014213800"><font size=2 color="5279A4" >014213800</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014213800"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014213800"><font size=2 color="5279A4" >SARSWATHIBAI P MISAL</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014213800"><font size=2 color="5279A4" >M.I.D.C ROAD TANAJI NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014213900"><font size=2 color="5279A4" >014213900</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014213900"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014213900"><font size=2 color="5279A4" >GOVIND M MANANANE</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014213900"><font size=2 color="5279A4" >M.I.D.C ROAD TANAJI NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014214000"><font size=2 color="5279A4" >014214000</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014214000"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014214000"><font size=2 color="5279A4" >SANJAY C SAWANT</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014214000"><font size=2 color="5279A4" >M.I.D.C ROAD TANAJI NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014214100"><font size=2 color="5279A4" >014214100</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014214100"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014214100"><font size=2 color="5279A4" >SAMPAT D.POL</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014214100"><font size=2 color="5279A4" >M.I.D.C ROAD TANAJI NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014214200"><font size=2 color="5279A4" >014214200</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014214200"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014214200"><font size=2 color="5279A4" >DATATARAYA SLENKAR</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014214200"><font size=2 color="5279A4" >M.I.D.C ROAD TANAJI NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014245700"><font size=2 color="5279A4" >014245700</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014245700"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014245700"><font size=2 color="5279A4" >RAMDULAR P.YADAV</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014245700"><font size=2 color="5279A4" >NR.M.I.D.C. NR.BK.204 DHOBHI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014245800"><font size=2 color="5279A4" >014245800</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014245800"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014245800"><font size=2 color="5279A4" >SITARAM M YADAV</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014245800"><font size=2 color="5279A4" >NR.M.I.D.C. NR.BK.204 DHOBHI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014245900"><font size=2 color="5279A4" >014245900</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014245900"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014245900"><font size=2 color="5279A4" >MANIRAM S.YADAV</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014245900"><font size=2 color="5279A4" >NR.M.I.D.C. NR.BK.204 DHOBHI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014246000"><font size=2 color="5279A4" >014246000</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014246000"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014246000"><font size=2 color="5279A4" >BALIRAJ N.YADAV</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014246000"><font size=2 color="5279A4" >NR.M.I.D.C. NR.BK.204 DHOBHI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014240600"><font size=2 color="5279A4" >014240600</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014240600"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014240600"><font size=2 color="5279A4" >INDRAMANI C JAISWAR</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014240600"><font size=2 color="5279A4" >BELOW M.I.D.C. TANK DHOBHI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014240700"><font size=2 color="5279A4" >014240700</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014240700"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014240700"><font size=2 color="5279A4" >ASHIBHANU</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014240700"><font size=2 color="5279A4" >KAMLA NEHRU NAGAR DHOBHI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014227500"><font size=2 color="5279A4" >014227500</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014227500"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014227500"><font size=2 color="5279A4" >BAJNATH D. MISHRA</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014227500"><font size=2 color="5279A4" >BELOW M.I.D.C DHOBI GHAT KAMLA NEHRU NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014227600"><font size=2 color="5279A4" >014227600</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014227600"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014227600"><font size=2 color="5279A4" >ANARKALI RAMKISHORE CHUHAN</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014227600"><font size=2 color="5279A4" >BELOW M.I.D.C DHOBI GHAT KAMLA NEHRU NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014227700"><font size=2 color="5279A4" >014227700</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014227700"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014227700"><font size=2 color="5279A4" >AMARKALI R. CHAWAN</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014227700"><font size=2 color="5279A4" >BELOW M.I.D.C DHOBI GHAT KAMLA NEHRU NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014227800"><font size=2 color="5279A4" >014227800</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014227800"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014227800"><font size=2 color="5279A4" >AMITKUMAR H/VASANTKUMAR U DUBEY</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014227800"><font size=2 color="5279A4" >BELOW M.I.D.C DHOBI GHAT KAMLA NEHRU NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014227900"><font size=2 color="5279A4" >014227900</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014227900"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014227900"><font size=2 color="5279A4" >BINDYAWATHISINGH/W/O H.P SINGH</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014227900"><font size=2 color="5279A4" >BELOW M.I.D.C DHOBI GHAT KAMLA NEHRU NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014228000"><font size=2 color="5279A4" >014228000</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014228000"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014228000"><font size=2 color="5279A4" >AMIRHUSAIN M SHAIKH</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014228000"><font size=2 color="5279A4" >BELOW M.I.D.C DHOBI GHAT KAMLA NEHRU NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014228100"><font size=2 color="5279A4" >014228100</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014228100"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014228100"><font size=2 color="5279A4" >INDRABALI RAMJASH CHAUHAN</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014228100"><font size=2 color="5279A4" >BELOW M.I.D.C DHOBI GHAT KAMLA NEHRU NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014228200"><font size=2 color="5279A4" >014228200</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014228200"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014228200"><font size=2 color="5279A4" >USHACHARAN UPENDRA NARAYAN JHA</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014228200"><font size=2 color="5279A4" >BELOW M.I.D.C DHOBI GHAT KAMLA NEHRU NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014228300"><font size=2 color="5279A4" >014228300</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014228300"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014228300"><font size=2 color="5279A4" >MANMOHAN M. SHAH</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014228300"><font size=2 color="5279A4" >BELOW M.I.D.C DHOBI GHAT KAMLA NEHRU NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014228400"><font size=2 color="5279A4" >014228400</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014228400"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014228400"><font size=2 color="5279A4" >PATHRU NANIK DHIVER</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014228400"><font size=2 color="5279A4" >BELOW M.I.D.C DHOBI GHAT KAMLA NEHRU NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014228500"><font size=2 color="5279A4" >014228500</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014228500"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014228500"><font size=2 color="5279A4" >YAMUNA DEONARAYAN PANDIT</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014228500"><font size=2 color="5279A4" >BELOW M.I.D.C DHOBI GHAT KAMLA NEHRU NAGAR  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#f0f6fc'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014253900"><font size=2 color="5279A4" >014253900</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014253900"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014253900"><font size=2 color="5279A4" >KAILASHNATH/KALPNATH/MALIK PAL</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014253900"><font size=2 color="5279A4" >NR BK 205 DHOBI GHAT  ULHASNAGAR 1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+
+<!--Developed by sudhir chavhan 03May09-->
+
+										<TR class=bluetext bgcolor='#e1eefa'>
+                                            
+                                          <TD ><a href="propertydues.jsp?propertyNo=014254000"><font size=2 color="5279A4" >014254000</font><BR></a></TD>
+       									  <TD class=bluetext ><a href="propertydues.jsp?propertyNo=014254000"><font size=2 color="5279A4" >04/1</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014254000"><font size=2 color="5279A4" >CHINA SAIBANNA HUSAINAPPA BOYA</font><BR></a></TD>
+                                          <TD class=bluetext><a href="propertydues.jsp?propertyNo=014254000"><font size=2 color="5279A4" >04/1 NR BK 205 DHOBI GHAT ,Ulhasnagar-1</font><BR></a></TD>
+                                          
+                                        </TR>
+
+<!--Developed by sudhir chavhan 03May09 -->
+
+                                            
+												 
+                                              </table>
+                                          </div>
+
+  <TR class=bluetext> <TD class=contentmarathi colspan=9> 
+													
+
+
+													
+
+												   <br>
+												  <font color=brown  size=3>Total Data Search &nbsp;/&nbsp;&#2319;&#2325;&#2369;&#2339;&#32;&#2350;&#2366;&#2361;&#2368;&#2340;&#2368;&#32;&#2358;&#2379;&#2343;: 100 / 1888</font>
+												  <BR><br><font size=4 color="#000000">|</font>&nbsp;
+
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=1"><font color="#000000">1</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=2"><font color="#000000">2</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=3"><font color="#000000">3</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=4"><font color="#000000">4</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=5"><font color="#000000">5</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=6"><font color="#000000">6</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=7"><font color="#000000">7</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=8"><font color="#000000">8</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=9"><font color="#000000">9</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=10"><font color="#000000">10</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=11"><font color="Red" size=4><Strong>11</Strong></font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=12"><font color="#000000">12</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=13"><font color="#000000">13</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=14"><font color="#000000">14</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=15"><font color="#000000">15</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=16"><font color="#000000">16</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=17"><font color="#000000">17</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=18"><font color="#000000">18</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															
+															<a href="propertyduessearch.jsp?txtFName=&txtSName=&txtLName=&oldpropno=&propward=4100000108&pageNumber=19"><font color="#000000">19</font>&nbsp;<font size=4 color="#000000">|</font>&nbsp;</a>
+															                                               
+                                               </TD></tr>
+
+               <tr>
+	               <td align =center  class=bluetext>
+		              <input type=button name=back value='&nbsp;&nbsp;Back&nbsp/&nbsp;&#2350;&#2366;&#2327;&#2375;' onClick="javascript:window.history.go(-1)" >
+                   </td>
+			  </tr>
+			</table>
+	
+								
+           </tr>
+      
+
+      </table>
+
+      <br>
+    </td>
+	 </tr>
+</table>
+    <!--<td width="1%" background="../images/dotline.jpg"><img src="../images/dotline.jpg" width="7" height="53"></td>
+    <td width="22%" valign="top"> 
+      
+<html>
+<head>
+<title>UMC</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/global.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" class="ta">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#E8EBEE">
+      <tr>
+	    <td background="../images/swoosh.jpg" scope="row" height="20"><span class="menu_header">&nbsp;&nbsp;RIGHT&nbsp;TO&nbsp;INFORMATION </span></td>
+      </tr>
+      <tr>
+        <td height="15"><a href="http://www.umc.gov.in/jsp/download/rti_off_e.pdf" target="_blank"><div align="left" class="menu_text">&nbsp;&nbsp;Information&nbsp;Officers </div></a></td>
+      </tr>
+      <tr>
+	    <td height="15"><a href="rti_manuals.jsp" target="_blank"><div align="left" class="menu_text">&nbsp;&nbsp;Manuals</div></a></td>
+      </tr>
+      <tr>
+        <td height="5" ></td>
+      </tr>
+      <tr>
+	  <td background="../images/swoosh.jpg" scope="row" height="20"><span class="menu_header">&nbsp;&nbsp;TENDERS </span></td>
+      </tr>
+	   <tr>
+        <td height="15"><a href="general_tenders.jsp" target="_blank"> <div align="left" class="menu_text">&nbsp;&nbsp;General&nbsp;Tenders</div></a></td>
+      </tr>
+      <tr>
+	    <td height="15"><a href="pwd_tenders.jsp" target="_blank"><div align="left" class="menu_text">&nbsp;&nbsp;PWD&nbsp;Tenders</div></a></td>
+      </tr>
+      <tr>
+        <td height="5" ></td>
+      </tr>
+      <tr>
+	  <td background="../images/swoosh.jpg" scope="row" height="20"><span class="menu_header">&nbsp;&nbsp;PROJECTS </span></td>
+      </tr>
+	  <tr>
+        <td height="15"><a href="future_projects.jsp" target="_blank"><div align="left" class="menu_text">&nbsp;&nbsp;Future&nbsp;Projects</div></a></td>
+      </tr>
+      <tr>
+	    <td height="15"><a href="http://www.umc.gov.in/jsp/download/ongoing_works.pdf" target="_blank"><div align="left" class="menu_text">&nbsp;&nbsp;Ongoing&nbsp;Works</div></a></td>
+      </tr>
+      <tr>
+	    <td height="15"><a href="jnnurm.jsp" target="_blank"><div align="left" class="menu_text">&nbsp;&nbsp;JNNURM</div></a></td>
+      </tr>
+      <tr>
+        <th height="5" ></th>
+      </tr>
+      <tr>
+	  <td background="../images/swoosh.jpg" scope="row" height="20"><span class="menu_header">&nbsp;&nbsp;TOWN&nbsp;PLANNING </span></td>
+      </tr>
+	   <tr>
+	    <td height="15"><a href="building_permissions.jsp" target="_blank">
+         <div align="left" class="menu_text">&nbsp;&nbsp;Building&nbsp;Permissions</div></a></td>
+      </tr>
+	  	   <tr>
+	    <td height="15"><a href="building_regularization.jsp" target="_blank">
+         <div align="left" class="menu_text">&nbsp;&nbsp;Regularization</div></a></td>
+      </tr>
+	  	   <tr>
+	    <td height="15"><a href="http://www.umc.gov.in/jsp/download/assessment_guidelines.pdf" target="_blank">
+         <div align="left" class="menu_text">&nbsp;&nbsp;Assessment&nbsp;Guidelines</div></a></td>
+      </tr>
+      <tr>
+        <th height="5" ></th>
+      </tr>
+	        <tr>
+	  <td background="../images/swoosh.jpg" scope="row" height="20"><span class="menu_header">&nbsp;&nbsp;DISASTER&nbsp;MANAGEMENT </span></td>
+      </tr>
+	  	  	   <tr>
+	    <td height="15"><a href="http://www.umc.gov.in/jsp/download/action_plan.pdf" target="_blank">
+         <div align="left" class="menu_text">&nbsp;&nbsp;Action&nbsp;Plan</div></a></td>
+      </tr>
+	  	  	   <tr>
+	  	  	     <td height="15"><a href="http://www.chm.edu/Files/Current_Vantage_Pro_Plus.htm" target="_blank">
+	  	  	       <div align="left" class="menu_text">&nbsp;&nbsp;City Weather</div>
+	  	  	     </a></td>
+  </tr>
+	  	  	   <tr>
+	    <td height="15"><a href="quick_service.jsp">
+         <div align="left" class="menu_text">&nbsp;&nbsp;Quick&nbsp;Services</div></a></td>
+      </tr>
+	  	  	   <tr>
+                 <th height="5" ></th>
+  </tr>
+	  	  	   <tr>
+                 <td background="../images/swoosh.jpg" scope="row" height="20"><span class="menu_header">&nbsp;&nbsp;IN HOUSE TRAINING</span></td>
+  </tr>
+               <tr>
+                 <td height="15"><a href="opening_atec.jsp" target="_blank"><span class="menu_text">&nbsp;&nbsp;About  Centre</span></a></td>
+               </tr>
+               <tr>
+                 <td height="15"><a href="http://www.umc.gov.in/jsp/download/calendar.pdf" target="_blank"><span class="menu_text">&nbsp;&nbsp;Training Calendar</span></a></td>
+               </tr>
+      <tr>
+	    <td height="15"><a href="http://ulhasnagarmunicipalcorporation.blogspot.com" target="_blank">
+         <div align="left" class="menu_text">&nbsp;&nbsp;UMC Blog</div>
+	    </a></td>
+      </tr>
+      <tr>
+        <th height="5" ></th>
+      </tr>
+      <tr>
+        <td background="../images/swoosh.jpg" scope="row" height="20"><span class="menu_header">&nbsp;&nbsp;BUDGET </span></td>
+      </tr>
+      <tr>
+        <td height="15"><a href="jsp/budget.jsp" target="_blank">
+          <div align="left" class="menu_text">&nbsp;&nbsp;2009-2010</div>
+        </a></td>
+      </tr>
+      <tr>
+        <td height="15"><a href="jsp/daybook.jsp" target="_blank">
+          <div align="left" class="menu_text">&nbsp;&nbsp;Day Book</div>
+        </a></td>
+      </tr>
+</table>
+
+</body>
+</html>
+
+    </td>
+ 
+<@-- <SCRIPT LANGUAGE="JavaScript">
+  function Start(page)
+  {
+  OpenWin=this.open(page,"CtrlWindow","toolbar=no,menubar=no,width=600,height=400,location=no,scrollbars=yes,resize=no");
+  }
+</SCRIPT> 
+<link rel="stylesheet" href="../css/global.css" type="text/css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td bgcolor="284464" height="2"> 
+      <div align="center"><a href="../jsp/sitemap.jsp">Site Map</a> <font color="#FFFFFF">|</font> 
+        <a href="../jsp/legal_notice.jsp">Disclaimer</a> <font color="#FFFFFF">|</font> 
+        <A onmouseover="window.status='cfc@umc.gov.in'; return true;" onmouseout    ="window.status=' '; return true;" href="mailto:cfc@umc.gov.in" >Mail</a> <font color="#FFFFFF">|</font> <a href="http://www.maharashtra.gov.in" target="_blank">State Govt. 
+        </a> <font color="#FFFFFF">|</font> <a href="http://59.90.33.92:8080/customercare/jsp/feedbackForm.jsp" target="_blank">Feedback</a></div>
+    </td>
+  </tr>
+</table>
+	--@>   -->
+</form>
+
+</body>
+
+</html>

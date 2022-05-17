@@ -1,0 +1,562 @@
+
+
+
+<html>
+<head>
+<title>:: ULHASNAGAR MUNICIPAL CORPORATION ::</title>
+<SCRIPT language=JavaScript src="JavaScript/general.js" 
+type=text/javascript></SCRIPT>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/global.css" type="text/css">
+ <script language="javascript">
+        
+		 function wardsubmit()
+		 {
+           var flag=0;
+
+		   if(document.FrmPropertySearch.txtFName.value == '')
+			 {
+			  flag = flag +1;
+             }
+		   if(document.FrmPropertySearch.txtSName.value == '')
+			 {
+			  flag = flag +1;
+             }
+		   if(document.FrmPropertySearch.txtLName.value == '')
+			 {
+			  flag = flag +1;
+			 }
+		   if(document.FrmPropertySearch.oldpropno.value == '')
+			 {
+			  flag = flag +1;
+			 }
+		   if(document.FrmPropertySearch.propward.value == 'All')
+			 {
+			  flag = flag +1;
+			 }
+
+		   if(flag==5)
+			 {
+              alert("Please select any one search criteria");
+			  document.FrmPropertySearch.txtFName.focus();
+              return false;
+             }	
+			 
+
+           if(flag<5)
+			{
+               document.FrmPropertySearch.submit();
+			}  
+
+
+			
+         }								  
+        function clearForm()
+        {
+        document.FrmPropertySearch.reset();
+        return false;
+        }
+
+
+
+ </script>
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0">
+ <form name="FrmPropertySearch" action='propertyduessearch.jsp'  method=POST>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="71%"> 
+		 
+
+<html>
+<head>
+<script language="javascript">
+function checkLogin(){
+	if(document.index.userid.value==""){
+		alert("Please Enter User Id");
+		document.index.userid.focus();
+		return false;
+	}else if(document.index.password.value==""){
+		alert("Please Enter Password");
+		document.index.password.focus();
+		return false;
+	}else{
+		document.index.action="http://203.200.229.52:8090/umc/jsp/logincheck.jsp";
+		document.index.submit();
+	}
+}
+
+
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+  function Start(page)
+  {
+  	OpenWin=this.open(page,"CtrlWindow","toolbar=no,menubar=no,width=600,height=400,location=no,scrollbars=yes,resize=no");
+  }
+</SCRIPT>
+<style>
+
+select.flat,textarea.flat,input.flat 
+{ 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px;
+	border-color : #888888;
+	border-style: solid;
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px;
+}
+</style>
+<title>:: ULHASNAGAR MUNICIPAL CORPORATION ::</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/global.css" type="text/css">
+<link rel="stylesheet" href="../css/global.css" type="text/css">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="100%" background="../images/umc_top_bg.jpg"><img src="../images/umc_top.jpg" ></td>
+  </tr>
+  <tr> 
+    <td width="100%" background="../images/umc_text_bg.jpg"><img src="../images/umc_text.jpg"></td>
+  </tr>
+  <!-- <tr> 
+    <td width="100%" background="../images/umc_text_menu.jpg"> 
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tr class="form_hd2" >
+			<td width="10%" height="20">&nbsp;&nbsp;<a href="http://www.umc.gov.in"><font color="#FFFFFF">HOME</font></a></td>
+			<td height="20"><img src="../images/menu_separator.gif" border=0 align=absMiddle></td>
+			<td width="15%" height="20"><a href="about_us.jsp">ABOUT US</a> </td>
+			<td height="20"><img src="../images/menu_separator.gif" border=0 align=absMiddle></td>
+			<td width="15%" height="20"><a href="develop_plan.jsp">CITY MAP</a></td>
+			<td height="20"><img src="../images/menu_separator.gif" border=0 align=absMiddle></td>
+			<td width="15%" height="20"><a href="http://203.200.229.52:8090/umc/jsp/citizen_charterForm.jsp" target="_blank">CITIZEN CHARTER</a></td>
+			<td height="20"><img src="../images/menu_separator.gif" border=0 align=absMiddle></td>
+			<td width="15%" height="20"><a href="opening_cfc.jsp" target="_blank">DOWNLOAD FORMS</a> </td>
+			<td height="20"><img src="../images/menu_separator.gif" border=0 align=absMiddle></td>
+			<td width="15%" height="20"><a href="press_release.jsp" target="_blank">PRESS RELEASE</a> </td>
+			<td height="20"><img src="../images/menu_separator.gif" border=0 align=absMiddle></td>
+			<td width="15%" height="20"><a href="contact_us.jsp">CONTACT US</a> </td>
+		  </tr>
+	  </table>
+	</td>
+  </tr>-->
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="15%" valign="top"> 
+<div align="center"></div> 
+
+ 
+    </td>
+  </tr>
+</table> 
+ <br>
+    <!--comment given by Vijay Gupta on 21.08.2010 <td width="18%" valign="top" bgcolor="E6E6E6"> 
+      <table cellspacing=0 cellpadding=0 width=99% border=0>
+        <tbody> 
+        <tr> 
+          <td bgcolor=#ffffff height=1 valign="top"><img height=1 alt="" 
+                        src="Menu RealGuide_files/007.gif" width=1 
+                    border=0></td>
+        </tr>
+        </tbody> 
+      </table>
+      
+      
+	      
+     
+     
+	new develop by sudhir chavhan ABM 27AUS2009 
+    
+	<td width="1%" background="../images/dotline.jpg"><img src="../images/dotline.jpg" width="7" height="53"></td> -->
+	<table width="100%">
+	<tr>
+    <td width="53%" valign="top">
+      <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td >
+           
+
+              <TABLE WIDTH="100%" BORDER="0" cellpadding="3" cellspacing="1">
+                <TR bgcolor="5279A4"> 
+                  <TD  WIDTH="100%" COLSPAN="3" class="head1" height="20"> 
+                    <div align="center">PROPERTY NUMBER SEARCH&nbsp/&nbsp;&#2350;&#2366;&#2354;&#2350;&#2340;&#2381;&#2340;&#2366;&#32;&#2325;&#2381;&#2352;&#2350;&#2366;&#2306;&#2325;&#32;&#2358;&#2379;&#2343;</div>
+                  </TD>
+				</TR>
+		      </table>
+			 </td>
+			</tr>
+		</table>
+	</td>
+	</tr>
+	<tr  align=center>
+	  <td>
+		<table WIDTH="70%" BORDER="1" cellpadding="3" cellspacing="1">
+        <TR > 
+		<br><br>
+	       
+
+                            <td colspan=1 align=left class=head2><font size=2>Owner First Name &nbsp/&nbsp;&#2343;&#2366;&#2352;&#2325;&#2366;&#2330;&#2375;&#32;&#2346;&#2361;&#2368;&#2354;&#2375;&#32;&#2344;&#2366;&#2357;&#32;&#58; </font></td>
+                                            <td colspan=1 align=left class=text class="bluetext"><input type=text size=19 name=txtFName ></td>
+
+                                            <td colspan=1 align=left class=head2><font size=2>Middle Name  &nbsp/&nbsp;&#2350;&#2343;&#2354;&#2375;&#32;&#2344;&#2366;&#2357;&#32;&#58;</font> </td>
+                                            <td colspan=1 align=left class=bluetext><input type=text size=19 name=txtSName ></td>
+                                            </tr>              
+   
+                                            <tr>
+                                                <td colspan=1 align=left class=head2><font size=2>Last Name &nbsp/&nbsp;&#2309;&#2306;&#2340;&#2367;&#2350;&#32;&#2344;&#2366;&#2357;&#32;&#58; </font></td>
+                                                <td colspan=1 align=left class=bluetext><input type=text size=19 name=txtLName></td>
+												 <td colspan=1 align=left class=head2><font size=2> Old Property No &nbsp/&nbsp;&#2332;&#2369;&#2344;&#2366;&#32;&#2350;&#2366;&#2354;&#2350;&#2340;&#2381;&#2340;&#2366;&#32;&#2325;&#2381;&#2352;&#2350;&#2366;&#2306;&#2325;&#46;&#32;&#58;</font> </td>
+                                               <td colspan=1 align=left class=bluetext><input type=text size=19 name=oldpropno ></td>
+
+                                               </TR>   
+												<TR><td colspan=1 align=left class=head2><font size=2>Ward &nbsp/&nbsp;&#2357;&#2366;&#2352;&#2381;&#2337;&#32;&#58; </font></td>
+                                               <td colspan=3 align=left class=bluetext>
+                                               <select name="propward" class=bluetext  style=width:140 >
+                                               <option value='All' ><---------All---------></option>
+											              
+                                                       <option value="4100000014">01
+                                                              
+                                                       <option value="4100000169">02
+                                                              
+                                                       <option value="4100000005">03
+                                                              
+                                                       <option value="4100000108">04
+                                                              
+                                                       <option value="4100000007">05
+                                                              
+                                                       <option value="4100000174">06
+                                                              
+                                                       <option value="4100000139">07
+                                                              
+                                                       <option value="4100000106">08
+                                                              
+                                                       <option value="4100000003">09
+                                                              
+                                                       <option value="4100000001">10
+                                                              
+                                                       <option value="4100000016">11
+                                                              
+                                                       <option value="4100000181">12
+                                                              
+                                                       <option value="4100000141">13
+                                                              
+                                                       <option value="4100000032">14
+                                                              
+                                                       <option value="4100000143">15
+                                                              
+                                                       <option value="4100000034">16
+                                                              
+                                                       <option value="4100000010">17
+                                                              
+                                                       <option value="4100000190">18
+                                                              
+                                                       <option value="4100000018">19
+                                                              
+                                                       <option value="4100000037">20
+                                                              
+                                                       <option value="4100000039">21
+                                                              
+                                                       <option value="4100000112">22
+                                                              
+                                                       <option value="4100000104">23
+                                                              
+                                                       <option value="4100000041">24
+                                                              
+                                                       <option value="4100000012">25
+                                                              
+                                                       <option value="4100000044">26
+                                                              
+                                                       <option value="4100000047">27
+                                                              
+                                                       <option value="4100000052">28
+                                                              
+                                                       <option value="4100000055">29
+                                                              
+                                                       <option value="4100000058">30
+                                                              
+                                                       <option value="4100000026">31
+                                                              
+                                                       <option value="4100000063">32
+                                                              
+                                                       <option value="4100000024">33
+                                                              
+                                                       <option value="4100000066">34
+                                                              
+                                                       <option value="4100000068">35
+                                                              
+                                                       <option value="4100000071">36
+                                                              
+                                                       <option value="4100000076">37
+                                                              
+                                                       <option value="4100000079">38
+                                                              
+                                                       <option value="4100000083">39
+                                                              
+                                                       <option value="4100000085">40
+                                                              
+                                                       <option value="4100000102">41
+                                                              
+                                                       <option value="4100000087">42
+                                                              
+                                                       <option value="4100000110">43
+                                                              
+                                                       <option value="4100000114">44
+                                                              
+                                                       <option value="4100000089">45
+                                                              
+                                                       <option value="4100000153">46
+                                                              
+                                                       <option value="4100000117">47
+                                                              
+                                                       <option value="4100000124">48
+                                                              
+                                                       <option value="4100000126">49
+                                                              
+                                                       <option value="4100000022">50
+                                                              
+                                                       <option value="4100000100">51
+                                                              
+                                                       <option value="4100000133">52
+                                                              
+                                                       <option value="4100000130">53
+                                                              
+                                                       <option value="4100000091">54
+                                                              
+                                                       <option value="4100000128">55
+                                                              
+                                                       <option value="4100000094">56
+                                                              
+                                                       <option value="4100000097">57
+                                                              
+                                                       <option value="4100000136">58
+                                                              
+                                                       <option value="4100000050">99
+                                                 
+                                               </select>
+											   </td>
+											  </TR> 
+										    <tr><td colspan=4 align=left 
+											class=bluetext><b>&nbsp;</b></td></tr>
+                                       
+															  
+										
+												
+                                        <input type=hidden name=lang value='1'>
+
+
+                            </table>
+				 </td>
+		   </tr>
+		   <tr><td><br></td></tr>
+		  <tr>
+		  <td>
+		  <table align=center>
+                              <tr></tr>
+			<tr  width="70%" >
+			     <td align =center  class=bluetext>
+					
+					<input type=button name=back value='&nbsp;&nbsp;Back&nbsp/&nbsp;&#2350;&#2366;&#2327;&#2375;' onClick="javascript:window.history.go(-1)" >
+				</td>
+                                          			
+                 <td  align =left  class=bluetext>
+			     
+				   <input type=button  value='Search&nbsp/&nbsp;&#2358;&#2379;&#2343;&#2366;'   onclick="wardsubmit();" > 
+                  </td>
+                  <td  align =left  class=bluetext>
+                     <input type=reset value='&nbsp;&nbsp;Clear&nbsp/&nbsp;&#2325;&#2381;&#2354;&#2367;&#2351;&#2352;' name="clear"  class='osbutton' onClick="clearForm();">
+                                               
+                   </td>
+             </tr>
+               
+         
+
+                                       <script>
+										
+										if('null' != 'null')
+										{
+											document.FrmPropertySearch.txtFName.value='null'
+										}
+										if('null' != 'null')
+										{
+											document.FrmPropertySearch.txtSName.value='null'
+										}
+										if('null' != 'null')
+										{
+											document.FrmPropertySearch.txtLName.value='null'
+										}
+										if('null' != 'null')
+										{
+											document.FrmPropertySearch.oldpropno.value='null'
+										}
+							    		if('null' != 'null')
+										{
+											document.FrmPropertySearch.propward.value='null'
+										}   
+									  </script>
+
+									      
+								
+           </tr>
+      
+
+      </table>
+
+      <br>
+    </td>
+	 </tr>
+</table>
+    <!--<td width="1%" background="../images/dotline.jpg"><img src="../images/dotline.jpg" width="7" height="53"></td>
+    <td width="22%" valign="top"> 
+      
+<html>
+<head>
+<title>UMC</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/global.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" class="ta">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#E8EBEE">
+      <tr>
+	    <td background="../images/swoosh.jpg" scope="row" height="20"><span class="menu_header">&nbsp;&nbsp;RIGHT&nbsp;TO&nbsp;INFORMATION </span></td>
+      </tr>
+      <tr>
+        <td height="15"><a href="http://www.umc.gov.in/jsp/download/rti_off_e.pdf" target="_blank"><div align="left" class="menu_text">&nbsp;&nbsp;Information&nbsp;Officers </div></a></td>
+      </tr>
+      <tr>
+	    <td height="15"><a href="rti_manuals.jsp" target="_blank"><div align="left" class="menu_text">&nbsp;&nbsp;Manuals</div></a></td>
+      </tr>
+      <tr>
+        <td height="5" ></td>
+      </tr>
+      <tr>
+	  <td background="../images/swoosh.jpg" scope="row" height="20"><span class="menu_header">&nbsp;&nbsp;TENDERS </span></td>
+      </tr>
+	   <tr>
+        <td height="15"><a href="general_tenders.jsp" target="_blank"> <div align="left" class="menu_text">&nbsp;&nbsp;General&nbsp;Tenders</div></a></td>
+      </tr>
+      <tr>
+	    <td height="15"><a href="pwd_tenders.jsp" target="_blank"><div align="left" class="menu_text">&nbsp;&nbsp;PWD&nbsp;Tenders</div></a></td>
+      </tr>
+      <tr>
+        <td height="5" ></td>
+      </tr>
+      <tr>
+	  <td background="../images/swoosh.jpg" scope="row" height="20"><span class="menu_header">&nbsp;&nbsp;PROJECTS </span></td>
+      </tr>
+	  <tr>
+        <td height="15"><a href="future_projects.jsp" target="_blank"><div align="left" class="menu_text">&nbsp;&nbsp;Future&nbsp;Projects</div></a></td>
+      </tr>
+      <tr>
+	    <td height="15"><a href="http://www.umc.gov.in/jsp/download/ongoing_works.pdf" target="_blank"><div align="left" class="menu_text">&nbsp;&nbsp;Ongoing&nbsp;Works</div></a></td>
+      </tr>
+      <tr>
+	    <td height="15"><a href="jnnurm.jsp" target="_blank"><div align="left" class="menu_text">&nbsp;&nbsp;JNNURM</div></a></td>
+      </tr>
+      <tr>
+        <th height="5" ></th>
+      </tr>
+      <tr>
+	  <td background="../images/swoosh.jpg" scope="row" height="20"><span class="menu_header">&nbsp;&nbsp;TOWN&nbsp;PLANNING </span></td>
+      </tr>
+	   <tr>
+	    <td height="15"><a href="building_permissions.jsp" target="_blank">
+         <div align="left" class="menu_text">&nbsp;&nbsp;Building&nbsp;Permissions</div></a></td>
+      </tr>
+	  	   <tr>
+	    <td height="15"><a href="building_regularization.jsp" target="_blank">
+         <div align="left" class="menu_text">&nbsp;&nbsp;Regularization</div></a></td>
+      </tr>
+	  	   <tr>
+	    <td height="15"><a href="http://www.umc.gov.in/jsp/download/assessment_guidelines.pdf" target="_blank">
+         <div align="left" class="menu_text">&nbsp;&nbsp;Assessment&nbsp;Guidelines</div></a></td>
+      </tr>
+      <tr>
+        <th height="5" ></th>
+      </tr>
+	        <tr>
+	  <td background="../images/swoosh.jpg" scope="row" height="20"><span class="menu_header">&nbsp;&nbsp;DISASTER&nbsp;MANAGEMENT </span></td>
+      </tr>
+	  	  	   <tr>
+	    <td height="15"><a href="http://www.umc.gov.in/jsp/download/action_plan.pdf" target="_blank">
+         <div align="left" class="menu_text">&nbsp;&nbsp;Action&nbsp;Plan</div></a></td>
+      </tr>
+	  	  	   <tr>
+	  	  	     <td height="15"><a href="http://www.chm.edu/Files/Current_Vantage_Pro_Plus.htm" target="_blank">
+	  	  	       <div align="left" class="menu_text">&nbsp;&nbsp;City Weather</div>
+	  	  	     </a></td>
+  </tr>
+	  	  	   <tr>
+	    <td height="15"><a href="quick_service.jsp">
+         <div align="left" class="menu_text">&nbsp;&nbsp;Quick&nbsp;Services</div></a></td>
+      </tr>
+	  	  	   <tr>
+                 <th height="5" ></th>
+  </tr>
+	  	  	   <tr>
+                 <td background="../images/swoosh.jpg" scope="row" height="20"><span class="menu_header">&nbsp;&nbsp;IN HOUSE TRAINING</span></td>
+  </tr>
+               <tr>
+                 <td height="15"><a href="opening_atec.jsp" target="_blank"><span class="menu_text">&nbsp;&nbsp;About  Centre</span></a></td>
+               </tr>
+               <tr>
+                 <td height="15"><a href="http://www.umc.gov.in/jsp/download/calendar.pdf" target="_blank"><span class="menu_text">&nbsp;&nbsp;Training Calendar</span></a></td>
+               </tr>
+      <tr>
+	    <td height="15"><a href="http://ulhasnagarmunicipalcorporation.blogspot.com" target="_blank">
+         <div align="left" class="menu_text">&nbsp;&nbsp;UMC Blog</div>
+	    </a></td>
+      </tr>
+      <tr>
+        <th height="5" ></th>
+      </tr>
+      <tr>
+        <td background="../images/swoosh.jpg" scope="row" height="20"><span class="menu_header">&nbsp;&nbsp;BUDGET </span></td>
+      </tr>
+      <tr>
+        <td height="15"><a href="jsp/budget.jsp" target="_blank">
+          <div align="left" class="menu_text">&nbsp;&nbsp;2009-2010</div>
+        </a></td>
+      </tr>
+      <tr>
+        <td height="15"><a href="jsp/daybook.jsp" target="_blank">
+          <div align="left" class="menu_text">&nbsp;&nbsp;Day Book</div>
+        </a></td>
+      </tr>
+</table>
+
+</body>
+</html>
+
+    </td>
+ 
+<@-- <SCRIPT LANGUAGE="JavaScript">
+  function Start(page)
+  {
+  OpenWin=this.open(page,"CtrlWindow","toolbar=no,menubar=no,width=600,height=400,location=no,scrollbars=yes,resize=no");
+  }
+</SCRIPT> 
+<link rel="stylesheet" href="../css/global.css" type="text/css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td bgcolor="284464" height="2"> 
+      <div align="center"><a href="../jsp/sitemap.jsp">Site Map</a> <font color="#FFFFFF">|</font> 
+        <a href="../jsp/legal_notice.jsp">Disclaimer</a> <font color="#FFFFFF">|</font> 
+        <A onmouseover="window.status='cfc@umc.gov.in'; return true;" onmouseout    ="window.status=' '; return true;" href="mailto:cfc@umc.gov.in" >Mail</a> <font color="#FFFFFF">|</font> <a href="http://www.maharashtra.gov.in" target="_blank">State Govt. 
+        </a> <font color="#FFFFFF">|</font> <a href="http://59.90.33.92:8080/customercare/jsp/feedbackForm.jsp" target="_blank">Feedback</a></div>
+    </td>
+  </tr>
+</table>
+	--@>   -->
+</form>
+
+</body>
+
+</html>
